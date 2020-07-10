@@ -11,7 +11,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest"
   },
   "dependencies": {
     "gatsby": "^2.23.12",
@@ -19,6 +19,7 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.4",
     "babel-jest": "^26.1.0",
     "babel-preset-gatsby": "^0.5.2",
     "identity-obj-proxy": "^3.0.0",

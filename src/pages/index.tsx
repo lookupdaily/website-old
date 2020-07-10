@@ -1,9 +1,10 @@
 import React from "react"
+import { Header } from '../components/header'
 
 export default function Home() {
   return (
     <div>
-      <h1>Get out now!</h1>
+      <Header text="Get Out Now!"/>
       <p>Outside Lies Magic.</p>
     </div>
   )
