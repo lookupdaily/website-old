@@ -20,9 +20,16 @@ commands:
       - run: 
           name: run tests
           command: yarn run test
+      - restore_cache:
+          keys:
+            - gatsby-public-cache-{{ .Branch }}
       - run: 
           name: Gatsby Build
           command: yarn run build
+      - save_cache:
+          key: gatsby-public-cache-{{ .Branch }}
+          paths:
+            - ./public
 workflows:
     version: 2
     build-deploy:
@@ -48,3 +55,6 @@ jobs:
     working_directory: ~/repo
     steps:
       - build-and-test
+      - run:
+          name: Netlify Deploy
+          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=public
