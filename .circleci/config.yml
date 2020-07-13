@@ -52,7 +52,7 @@ jobs:
       - build-and-test
       - run:
           name: Netlify Deploy
-          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --dir=public
+          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --dir=public --message="$CIRCLE_BRANCH@$(git log --pretty='%h %s' -n 1 $CIRCLE_SHA1)"
   release:
     executor: node-executor
     working_directory: ~/repo
@@ -60,4 +60,5 @@ jobs:
       - build-and-test
       - run:
           name: Netlify Deploy
-          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=public
+          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=public ----message="$CIRCLE_BRANCH@$(git log --pretty='%h %s' -n 1 $CIRCLE_SHA1)"
+          
