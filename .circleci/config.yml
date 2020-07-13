@@ -1,11 +1,7 @@
-version: 2.1
-orbs:
-  node: circleci/node@3.0.1
 jobs:
   build-and-test:
     executor:
       name: node/default
-      tag: '13'
     steps:
       - checkout
       - node/install-packages:
@@ -13,6 +9,9 @@ jobs:
       - run: 
           command: yarn run test
           name: run YARN tests
+version: 2.1
+orbs:
+  node: circleci/node@3.0.1
 workflows:
     build-and-test:
       jobs:
