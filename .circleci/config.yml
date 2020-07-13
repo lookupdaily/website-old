@@ -50,6 +50,9 @@ jobs:
     working_directory: ~/repo
     steps:
       - build-and-test
+      - run:
+          name: Netlify Deploy
+          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --dir=public
   release:
     executor: node-executor
     working_directory: ~/repo
