@@ -1,10 +1,10 @@
 <h1 align="center">
-  Lookup. Daily
+  Lookup. Daily.
 </h1>
 
 Code in development for [lookupdaily.com](lookupdaily.netlify.app/), a blog style website to share walking and architecture recommendations, created by Liz Daly.
 
-Check it out now at [lookupdaily.netlify.app](https://lookupdaily.netlify.app/)!
+Work in progress - check it out now at [lookupdaily.netlify.app](https://lookupdaily.netlify.app/)!
 
 ## Technologies
 
