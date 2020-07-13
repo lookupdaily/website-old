@@ -1,10 +1,11 @@
 import React from "react"
-import { create } from "react-test-renderer"
+import { render, screen } from "@testing-library/react"
 import { Header } from "./header"
 
 describe("Header", () => {
-  it("renders correctly", () => {
-    const tree = create(<Header text="Lookupdaily" />)
-    expect(tree.toJSON()).toMatchSnapshot
+
+  it("renders header text", () => {
+    render(<Header text="Lookupdaily" />)
+    expect(screen.getByText('Lookupdaily')).toBeInTheDocument()
   })
 })
