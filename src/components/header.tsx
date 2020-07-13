@@ -5,7 +5,7 @@ interface TitleProps { text: string }
 export const Header = (props: TitleProps) => {
   return (
     <div>
-      <h1></h1>
+      <h1>{props.text}</h1>
     </div>
   )
 }
