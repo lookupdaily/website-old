@@ -1,14 +1,24 @@
-jobs:
+commands:
   build-and-test:
-    executor:
-      name: node/default
+    executors:
+      node-executor:
+      docker:
+        - image: circleci/node:10
     working_directory: ~/gatsby-site
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: yarn
+      - restore_cache:
+          keys:
+            - yarn-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install dependencies
+          command: yarn install
+      - save_cache: 
+          key: yarn-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
       - run: 
-          name: run YARN tests
+          name: run tests
           command: yarn run test
       - run: 
           name: Gatsby Build
