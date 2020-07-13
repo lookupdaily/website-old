@@ -6,6 +6,7 @@ export default function Home() {
     <div>
       <Header text="Get Out Now!" />
       <p>Outside Lies Magic.</p>
+      <p>Don't publish this</p>
     </div>
   )
 }
