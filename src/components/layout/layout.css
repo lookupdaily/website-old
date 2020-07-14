@@ -1,5 +1,6 @@
 :root {
-  --background-grey: #EAEDED;
+  --light-grey: #EAEDED;
+  --title-font-color: #2C3E50
 }
 
 body {
@@ -8,7 +9,7 @@ body {
 }
 
 .layout {
-  background-color: var(--background-grey);
+  background-color: var(--light-grey);
   display: flex;
   flex-direction: column;
   width: 100vw;
