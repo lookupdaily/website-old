@@ -1,15 +1,19 @@
-import React, { FunctionComponent } from "react"
+import * as React from "react"
+import { Header } from "../header/header"
 import { Container } from "../container/container"
 import "./layout.css"
 
 interface LayoutProps {
+  pageTitle: string
   children: React.ReactNode
 }
 
-export const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
+export const Layout: React.ReactNode = (props: LayoutProps) => {
   return (
     <div className="layout">
-      <Container>{children}</Container>
+      <h3>Look Up.</h3>
+      <Header text={props.pageTitle} />
+      <Container>{props.children}</Container>
     </div>
   )
 }

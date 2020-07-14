@@ -4,7 +4,12 @@ import { Layout } from "./layout"
 
 describe("Layout", () => {
   it("wraps content in div", () => {
-    render(<Layout>Hello, World!</Layout>)
+    render(<Layout pageTitle="test">Hello, World!</Layout>)
     expect(screen.getByText(/Hello/)).toBeInTheDocument()
+  })
+
+  it("displays page title", () => {
+    render(<Layout pageTitle="Home">Welcome!</Layout>)
+    expect(screen.getByText(/Home/)).toBeInTheDocument()
   })
 })
