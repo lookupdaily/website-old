@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react"
+import { Container } from "../container/container"
 import "./layout.css"
 
 interface LayoutProps {
@@ -8,7 +9,7 @@ interface LayoutProps {
 export const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
   return (
     <div className="layout">
-      <div className="container">{children}</div>
+      <Container>{children}</Container>
     </div>
   )
 }
