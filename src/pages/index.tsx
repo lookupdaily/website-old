@@ -5,9 +5,8 @@ import { Header } from "../components/header"
 export default function Home() {
   return (
     <Layout>
-      <Header text="Get Out Now!" />
-      <p>Outside Lies Magic.</p>
-      <p>Publish this</p>
+      <Header text="Look Up. Daily" />
+      <p>Outside Lies Magic</p>
     </Layout>
   )
 }
