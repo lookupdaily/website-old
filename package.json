@@ -18,7 +18,8 @@
     "netlify": "^4.3.5",
     "netlify-cli": "^2.58.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "typeface-montserrat": "^0.0.75"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.0",
