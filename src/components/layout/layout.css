@@ -1,11 +1,21 @@
 :root {
   --light-grey: #EAEDED;
-  --title-font-color: #2C3E50
+  --title-font-color: #2C3E50;
+  --title-font-family: montserrat, sans-serif;
+  /* --body-font:  */
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+p { 
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 .layout {
@@ -14,4 +24,44 @@ body {
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1.5rem;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  float: right;
+}
+
+.nav-list-item {
+  margin: 0 1rem;
+}
+
+.nav-brand {
+  text-decoration: none;
+  color: var(--title-font-color);
+  font-family: var(--title-font-family);
+}
+
+.nav-brand h3 {
+  font-weight: 400;
+}
+
+.nav-brand:visited {
+  color: var(--title-font-color);
+}
+
+.nav-brand:hover,
+.nav-brand:focus {
+  text-decoration: underline;
+}
+
+.nav-list a:visited {
+  color: black;
 }

@@ -14,19 +14,26 @@ interface NavProps {
   children: React.ReactNode
 }
 
-const ListLink: FunctionComponent<LayoutProps> = props => (
-  <li className="nav-item-list">
+const NavItem: FunctionComponent<NavProps> = props => (
+  <li className="nav-list-item">
     <Link to={props.to}>{props.children}</Link>
   </li>
 )
 
 export const Layout: FunctionComponent<LayoutProps> = props => (
   <div className="layout">
-    <div>
-      <h3>Look Up.</h3>
-      <ListLink to="/about">About</ListLink>
+    <div className="nav">
+      <Link to="/" className="nav-brand">
+        <h3>Look Up.</h3>
+      </Link>
+      <ul className="nav-list">
+        <NavItem to="/about">About</NavItem>
+        <NavItem to="/contact">Contact</NavItem>
+      </ul>
     </div>
-    <Header text={props.pageTitle} />
-    <Container>{props.children}</Container>
+    <Container>
+      <Header text={props.pageTitle} />
+      {props.children}
+    </Container>
   </div>
 )
