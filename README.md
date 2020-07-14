@@ -2,7 +2,7 @@
   Lookup. Daily.
 </h1>
 
-Code in development for [lookupdaily.com](lookupdaily.netlify.app/), a blog style website to share walking and architecture recommendations, created by Liz Daly.
+Code in development for [lookupdaily.com](lookupdaily.netlify.app/), a blog style website to share walking and architecture recommendations created by Liz Daly.
 
 Work in progress - check it out now at [lookupdaily.netlify.app](https://lookupdaily.netlify.app/)!
 
@@ -13,7 +13,7 @@ This website is built in Gatsby: a framework based on React, using GraphQL.
 Other technologies:
 - Language: TypeScript and JavaScript
 - Testing: Jest with React Testing Library
-- CI/CD: Circle CI, Netifly
+- CI/CD: Circle CI, Netlify
 
 
 ## 🚀 Getting Started
