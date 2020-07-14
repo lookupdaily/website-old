@@ -1,0 +1,8 @@
+:root {
+  --font-color: #2C3E50
+}
+.container {
+  margin: auto;
+  text-align: center;
+  color: var(--font-color);
+}
