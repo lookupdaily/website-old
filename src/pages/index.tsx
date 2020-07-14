@@ -1,8 +1,8 @@
-import React from "react"
+import * as React from "react"
 import { Layout } from "../components/layout/layout"
 import { Header } from "../components/header"
 
-export default function Home() {
+export default function Home(): React.ReactNode {
   return (
     <Layout>
       <Header text="Look Up. Daily" />

@@ -6,9 +6,8 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "lint": "prettier \"./src/**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest"
