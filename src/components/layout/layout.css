@@ -1,0 +1,21 @@
+:root {
+  --background-grey: #EAEDED;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  background-color: var(--background-grey);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.container {
+  margin: auto;
+  text-align: center;
+}

@@ -1,4 +1,6 @@
 import * as React from "react"
+import "typeface-montserrat"
+import "./header.css"
 
 interface TitleProps { text: string }
 
