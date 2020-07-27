@@ -34,9 +34,14 @@ export const NavBrand: FunctionComponent<ImageLinkProps> = ({
 
 export const NavBar: FunctionComponent<null> = () => {
   return (
-    <div>
-      <NavBrand src="#" altText="test" />
-      <NavLink to={"/"}>Look Up.</NavLink>
-    </div>
+    <nav>
+      <div>
+        <NavBrand src="#" altText="LookUp logo" />
+        <NavLink to={"/"}>Daily.</NavLink>
+      </div>
+      <div>
+        <NavLink to={"#"}>About.</NavLink>
+      </div>
+    </nav>
   )
 }
