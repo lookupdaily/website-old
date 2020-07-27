@@ -9,7 +9,7 @@ describe("Layout", () => {
   })
 
   it("displays page title", () => {
-    render(<Layout pageTitle="Home">Welcome!</Layout>)
-    expect(screen.getByText(/Home/)).toBeInTheDocument()
+    render(<Layout pageTitle="Test">Welcome!</Layout>)
+    expect(screen.getByText(/Test/)).toBeInTheDocument()
   })
 })

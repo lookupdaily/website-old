@@ -1,6 +1,6 @@
-import React, { FunctionComponent, ReactNode, ReactElement, Component } from "react"
+import React, { FunctionComponent, ReactNode } from "react"
 import { Link } from "gatsby"
-import * as navStyles from "./nav.module.css"
+// import * as navStyles from "./nav.module.css"
 
 interface GatsbyLinkProps {
   children: ReactNode
@@ -13,28 +13,30 @@ interface ImageLinkProps {
   altText: string
 }
 
-interface NavProps {
-
-}
-
-export const NavLink: FunctionComponent<GatsbyLinkProps> = ({children, to}: GatsbyLinkProps) => {
+export const NavLink: FunctionComponent<GatsbyLinkProps> = ({
+  children,
+  to,
+}: GatsbyLinkProps) => {
   return <Link to={to}>{children}</Link>
 }
 
-export const NavBrand: FunctionComponent<ImageLinkProps> = ({to, src, altText}: ImageLinkProps) => {
-  return(
+export const NavBrand: FunctionComponent<ImageLinkProps> = ({
+  to = "/",
+  src,
+  altText,
+}: ImageLinkProps) => {
+  return (
     <Link to={to}>
-      <img src={src} alt-text={altText}/>
+      <img src={src} alt-text={altText} />
     </Link>
   )
-} 
+}
 
-export const NavBar: FunctionComponent<NavProps> = () => {
+export const NavBar: FunctionComponent<null> = () => {
   return (
     <div>
-      <NavBrand src="#" altText="test"/>
-      <NavLink to={'/'}>Home</NavLink>
+      <NavBrand src="#" altText="test" />
+      <NavLink to={"/"}>Look Up.</NavLink>
     </div>
   )
-} 
-
+}

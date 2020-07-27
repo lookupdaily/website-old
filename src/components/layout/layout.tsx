@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react"
-import { Nav } from "../nav/nav"
+import { NavBar } from "../nav/nav"
 import { Header } from "../header/header"
 import { Container } from "../container/container"
 import "./layout.css"
@@ -11,6 +11,7 @@ export interface LayoutProps {
 
 export const Layout: FunctionComponent<LayoutProps> = props => (
   <div className="layout">
+    <NavBar />
     <Container>
       <Header text={props.pageTitle} />
       {props.children}
