@@ -7,11 +7,34 @@ interface GatsbyLinkProps {
   to: string
 }
 
+interface ImageLinkProps {
+  to: string
+  src: string
+  altText: string
+}
+
+interface NavProps {
+
+}
+
 export const NavLink: FunctionComponent<GatsbyLinkProps> = ({children, to}: GatsbyLinkProps) => {
+  return <Link to={to}>{children}</Link>
+}
+
+export const NavBrand: FunctionComponent<ImageLinkProps> = ({to, src, altText}: ImageLinkProps) => {
+  return(
+    <Link to={to}>
+      <img src={src} alt-text={altText}/>
+    </Link>
+  )
+} 
+
+export const NavBar: FunctionComponent<NavProps> = () => {
   return (
     <div>
-      <Link to={to}>{children}</Link>
+      <NavBrand src="#" altText="test"/>
+      <NavLink to={'/'}>Home</NavLink>
     </div>
   )
-}
+} 
 

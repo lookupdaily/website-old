@@ -1,12 +1,11 @@
 import * as React from "react"
 import { render, screen } from "@testing-library/react"
-import userEvent from "@testing-library/user-event"
-import { NavLink } from './nav'
+import { NavLink, NavBrand, NavBar } from './nav'
 
 
 describe("Nav Link", () => {
   it("renders element", () => {
-    render(<NavLink>Home</NavLink>)
+    render(<NavLink to="#">Home</NavLink>)
     expect(screen.getByText('Home')).toBeInTheDocument()
   })
 
@@ -14,5 +13,19 @@ describe("Nav Link", () => {
     render(<NavLink to="/about">About</NavLink>)
     const link = screen.getByRole('link')
     expect(link).toContainHTML('/about')
+  })
+})
+
+describe("Nav brand", () => {
+  it("contains an image", () => {
+    render(<NavBrand to="#" src="test.png" altText="test"/>)
+    expect(screen.getByRole('img')).toBeInTheDocument()
+  })
+})
+
+describe("Nav bar", () => {
+  it("renders element", () => {
+    render(<NavBar/>)
+    expect(screen.getByRole('link')).toBeInTheDocument()
   })
 })
