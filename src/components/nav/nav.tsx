@@ -28,7 +28,7 @@ export const NavBrand: FunctionComponent<ImageLinkProps> = ({
 }) => {
   return (
     <Link to={to} title={title}>
-      <img src={src} alt-text={altText} title={title} />
+      <img src={src} alt-text={altText} />
     </Link>
   )
 }
