@@ -1,6 +1,5 @@
 import React, { FunctionComponent, ReactNode } from "react"
 import { Link } from "gatsby"
-// import * as navStyles from "./nav.module.css"
 
 interface GatsbyLinkProps {
   children: ReactNode
@@ -11,6 +10,7 @@ interface ImageLinkProps {
   to: string
   src: string
   altText: string
+  title: string
 }
 
 export const NavLink: FunctionComponent<GatsbyLinkProps> = ({
@@ -24,10 +24,11 @@ export const NavBrand: FunctionComponent<ImageLinkProps> = ({
   to = "/",
   src,
   altText,
+  title,
 }) => {
   return (
-    <Link to={to}>
-      <img src={src} alt-text={altText} />
+    <Link to={to} title={title}>
+      <img src={src} alt-text={altText} title={title} />
     </Link>
   )
 }
@@ -36,7 +37,7 @@ export const NavBar: FunctionComponent<null> = () => {
   return (
     <nav>
       <div>
-        <NavBrand src="#" altText="LookUp logo" />
+        <NavBrand src="#" altText="LookUp logo" title="Look Up" />
         <NavLink to={"/"}>Daily.</NavLink>
       </div>
       <div>
