@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react"
-import containerStyles from "./container.module.css"
+import * as containerStyles from "./container.module.css"
 
 interface ContainerProps {
   children: React.ReactNode

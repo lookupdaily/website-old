@@ -3,8 +3,8 @@ import { Layout } from "../components/layout/layout"
 
 export default function Home(): React.ReactNode {
   return (
-    <Layout pageTitle="Daily">
-      <p>Outside Lies Magic</p>
+    <Layout pageTitle="Contact">
+      <p>@lookupdaily</p>
     </Layout>
   )
 }

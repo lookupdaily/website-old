@@ -1,11 +1,21 @@
 :root {
   --light-grey: #EAEDED;
-  --title-font-color: #2C3E50
+  --title-font-color: #2C3E50;
+  --title-font-family: montserrat, sans-serif;
+  /* --body-font:  */
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 .layout {

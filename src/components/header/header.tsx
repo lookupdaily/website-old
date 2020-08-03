@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react"
 import "typeface-montserrat"
 import "./header.css"
 
-interface TitleProps {
+export interface TitleProps {
   text: string
 }
 
