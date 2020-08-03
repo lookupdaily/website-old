@@ -42,8 +42,7 @@ export const NavBar: FunctionComponent<null> = () => {
   return (
     <nav className={nav.bar}>
       <div>
-        <NavBrand src="#" altText="LookUp logo" title="Look Up" />
-        <NavLink to={"/"}>Daily.</NavLink>
+        <NavLink to={"/"}>Look Up.</NavLink>
       </div>
       <div>
         <NavLink to={"#"}>About.</NavLink>
